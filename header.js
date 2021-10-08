@@ -5,6 +5,20 @@ $(document).ready(function(){
       e.preventDefault();
     });
 
+    $("#column_left").hide()
+
+    $("#close-sidebar").click(function(){
+        $('.navbar-toggler').toggleClass('collapsed')
+        $("#column_left").toggle()
+    })
+
+    $(".navbar-toggler").click(function(e){
+        e.stopPropagation();
+        e.preventDefault();
+        $(this).toggleClass('collapsed')
+        $("#column_left").toggle()
+    })
+
     $(".nav-link").click(function(){
         $(this).toggleClass('addcolor')
     })    
