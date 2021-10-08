@@ -43,4 +43,16 @@ $(document).ready(function(){
             $(`#submenu-${val}`).removeClass("show")
         })    
     })
+
+    $(".multi-column-img-dropdown").hover(function(){
+        $(this).addClass('translateImage')
+        },
+        function()
+        {
+            $(this).removeClass('translateImage')
+        }
+    )
+
+
+
   });

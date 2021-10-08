@@ -160,6 +160,52 @@ DOCUMENTATION NAVBAR
     }
 }
 
+/***********************
+DEMO
+**********************/
+.multi-column-demo{
+    left: 180% !important;
+    right: auto !important;
+    text-align: left !important;
+    transform: translate(-35%, 0) !important;
+    width:1175px;
+    margin-top:10px;
+    background-color: #405979;
+  }
+
+.multi-column-img-dropdown{
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    width:175px;
+    height:125px;
+    background-size:cover;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+.translateImage{
+    cursor:pointer;
+    transform:translateY(-5%)
+}
+
+.row1{
+    margin-top:30px;
+    margin-left:20px;
+    margin-right:10px;
+}
+
+.row1>.col-sm-2{
+    margin:-2px;
+}
+
+
+/* .multi-column-img-dropdown img{
+    border:1px solid #fff;
+    height: cover;
+    width: cover;
+} */
+
+
+
 
 
 
