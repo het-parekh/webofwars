@@ -57,6 +57,30 @@ $(document).ready(function () {
 
 });
 
+// Section 1 button appear
+window.addEventListener('scroll', () => {
+
+  if (window.scrollY > 100) {
+    document.querySelector('.btn-exp').classList.add('appear')
+    setTimeout(() => {
+      document.querySelector('.btn-free').classList.add('appear')
+    }, 200)
+  }
+  else {
+    document.querySelector('.btn-exp').classList.remove('appear')
+    setTimeout(() => {
+      document.querySelector('.btn-free').classList.remove('appear')
+    }, 200)
+  }
+
+  if (window.scrollY > 180) {
+    document.querySelector('.main-nav').classList.add('fixed')
+  } else {
+    document.querySelector('.main-nav').classList.remove('fixed')
+
+  }
+})
+
 
 // Image carousel
 const imgContainer = document.querySelector('#imgs')

@@ -27,8 +27,13 @@ body {
 	padding-left: 100px;
 	padding-right: 100px;
 	width: 100%;
+	transition: all .5s ease;
 }
-
+.main-nav.fixed{
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+}
 .navbar .dropdown-toggle::after{
 	color:#3f78e0;
 }
@@ -233,11 +238,25 @@ DEMO
 	font-size: 0.9rem;
 	transition: all .3s ease-in-out;
 	box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+	opacity: 0;
+	transform: translateY(-30px);
 }
 .btn-exp{
 	background-color: #3f78e0;
 	color: #fff;
 }
+.btn-exp.appear{
+	transform: translateY(0);
+	opacity: 1;
+	/* animation: appear 1s ease forwards; */
+}
+.btn-free.appear{
+	transform: translateY(0);
+	opacity: 1;
+	/* animation: appear 1s ease forwards .3s; */
+}
+
+
 .btn-exp:hover{
 	color: #fff;
 	box-shadow: 1px 2px 3px rgba(0,0,0,.3);
