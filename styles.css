@@ -70,6 +70,9 @@ body {
 
 
 /* Third section what-we-do */
+.width-50{
+	width: 65%;
+}
 .what-we-do{
 	margin: 100px auto;
 }
@@ -162,8 +165,74 @@ body {
 .second-sec-img{
 	left: 60px;
 }
+.how-it-first-col{
+	padding: 80px;
+}
+
+/* 5th section carousel */
+
+#imgs img {
+	min-width: 30%;
+	width: 30%;
+	height: 300px;
+	object-fit: cover;
+	margin: 1.6666666667%;
+	border-radius: 12px;
+}
+
+.project-carousel {
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+}
+.btn-left,.btn-right{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.btn-left{
+	left: 30px;
+}
+.btn-right{
+	right: 30px;
+}
+#imgs {
+	display: flex;
+	flex-direction: row;
+	transform: translateX(0);
+	transition: transform 0.5s ease-in-out;
+}
+.dots-img{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.dots-img .dot{
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	border: 1px solid #666;
+	margin: 4px;
+}
+.dots-img .dot.active{
+	background-color: #666;
+}
+
+
 
 @media(max-width:768px){
+	.width-50{
+		width: 100%;
+	}
 	.sec-1-img{
 		display: none;
 		width: 0;
@@ -186,5 +255,27 @@ body {
 	}
 	.brands-img{
 		width: 100px;
+	}
+	.how-it-first-col{
+		padding:20px;
+	}
+	#imgs img {
+		width: 450px;
+		min-width: 450px;
+		height: 300px;
+		object-fit: cover;
+		margin: 25px;
+		border-radius: 12px;
+	}
+}
+@media (max-width: 520px){
+.project-carousel {
+	width: 90%;
+}
+	#imgs img {
+		width: 100%;
+		min-width: 100%;
+		height: 250px;
+		margin: 0px;
 	}
 }
