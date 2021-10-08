@@ -5,3 +5,49 @@ body {
 	padding:0;
 	margin:0;
 }
+.first-sec-img{
+	position: relative;
+	top: -100px;
+	left: 40px;
+}
+.sec-1-img{
+	position: relative;
+	width: 120px;
+	height: 160px;
+  background-image: radial-gradient(#ccc 2.5px, transparent 0px);
+  background-size: 15px 15px;
+	z-index: -1;
+}
+.btn{
+	border: none;
+	border-radius: 60px;
+	padding: 10px 15px;
+	width: 120px;
+	font-weight: 500;
+	font-size: 0.9rem;
+	transition: all .3s ease-in-out;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+.btn-exp{
+	background-color: cadetblue;
+	color: #fff;
+}
+.btn-exp:hover{
+	color: #fff;
+	box-shadow: 1px 2px 3px rgba(0,0,0,.3);
+
+}
+.btn-free{
+	border: 2px solid cadetblue;
+	color: cadetblue;
+}
+.btn-free:hover{
+	background-color: cadetblue;
+	color: #fff;
+	box-shadow: 1px 2px 3px rgba(0,0,0,.3);
+
+}
+.btn:hover{
+	outline: none;
+	transform: translateY(-3px);
+}
