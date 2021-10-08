@@ -9,6 +9,7 @@ body {
 	position: relative;
 	top: -100px;
 	left: 40px;
+	border-radius: 12px;
 }
 .sec-1-img{
 	position: relative;
@@ -50,4 +51,38 @@ body {
 .btn:hover{
 	outline: none;
 	transform: translateY(-3px);
+}
+
+/* second section styles */
+.brands{
+	padding: auto 20px;
+	margin: 50px auto;
+}
+.brands-img{
+	width: 140px;
+	padding: 20px;
+	height: 70px;
+}
+
+
+
+
+
+@media(max-width:768px){
+	.sec-1-img{
+		display: none;
+		width: 0;
+		height: 0;
+	}
+	.first-sec-img{
+		top: 0;
+		margin: 20px auto;
+		left: 0;
+	}
+	.brands{
+		margin: 50px auto;
+	}
+	.brands-img{
+		width: 100px;
+	}
 }
