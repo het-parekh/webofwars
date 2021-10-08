@@ -88,7 +88,7 @@ const imgContainer = document.querySelector('#imgs')
 const leftBtn = document.querySelector('.btn-left')
 const rightBtn = document.querySelector('.btn-right')
 
-let img = document.querySelectorAll('#imgs img')
+let img = document.querySelectorAll('#imgs .img-cont-car')
 let dots = document.querySelectorAll('.dots-img .dot')
 
 
