@@ -2,15 +2,212 @@
 
 <html>
     <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+        
+        <link rel='stylesheet' href='./header.css'>
     </head>
     <body>
-        <nav>
+        <nav class = 'navbar navbar-light py-3 bg-primary topmost'>
+            Moonshine St. 14/05 Light City
+            <span >
+               
+                    <li class="nav-item">00 (123) 456 78 90 </li>
+                    <li class="nav-item">sandbox@email.com </li>
+               
+            </span>
+        </nav>
+        <nav class = 'navbar navbar-expand-lg navbar-light py-3 bg-white main-nav'>
+            <a class="navbar-brand" href="#">
+                <img src="./images/logo.png" class="d-inline-block align-top" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse bg-white main-items-nav" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto ">
+                  <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class='demo'>Demos</span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Pages
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item multilevel"  id='services' data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Services <span aria-hidden="true" class="glyphicon glyphicon-triangle-right"></span> </a>
+                        <div class="dropdown-menu multilevel-dropdown-menu-1" x-placement='right-start' id="submenu-services">
+                            <a class="dropdown-item" href="#">Services I</a>
+                            <a class="dropdown-item" href="#">Services II</a>
+                        </div>
+                         
+                        <a class="dropdown-item multilevel"  id='about' data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">About <span aria-hidden="true" class="glyphicon glyphicon-triangle-right"></span> </a>
+                        <div class="dropdown-menu multilevel-dropdown-menu-2" x-placement='right-start' id="submenu-about">
+                            <a class="dropdown-item" href="#">About I</a>
+                            <a class="dropdown-item" href="#">About II</a>
+                        </div>
 
+                        <a class="dropdown-item multilevel"  id='contact' data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Contact <span aria-hidden="true" class="glyphicon glyphicon-triangle-right"></span> </a>
+                        <div class="dropdown-menu multilevel-dropdown-menu-3" x-placement='right-start' id="submenu-contact">
+                            <a class="dropdown-item" href="#">Contact I</a>
+                            <a class="dropdown-item" href="#">Contact II</a>
+                            <a class="dropdown-item" href="#">Contact III</a>
+                        </div>
+
+                      <a class="dropdown-item" href="#">Pricing</a>
+                      <a class="dropdown-item" href="#">One Page</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Projects
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#">Project I</a>
+                      <a class="dropdown-item" href="#">Project II</a>
+                      <a class="dropdown-item" href="#">Project III</a>
+                      <a class="dropdown-item" href="#">Project IV</a>
+                      <a class="dropdown-item multilevel"  id='sp' data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Single Projects <span aria-hidden="true" class="glyphicon glyphicon-triangle-right"></span> </a>
+                        <div class="dropdown-menu multilevel-dropdown-menu-5" x-placement='right-start' id="submenu-sp">
+                            <a class="dropdown-item" href="#">Single Project I</a>
+                            <a class="dropdown-item" href="#">Single Project II</a>
+                            <a class="dropdown-item" href="#">Single Project III</a>
+                        </div>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Blog
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#">Blog without Sidebar</a>
+                      <a class="dropdown-item" href="#">Blog with Sidebar</a>
+                      <a class="dropdown-item" href="#">Blog with Left Sidebar</a>
+                      <a class="dropdown-item multilevel"  id='blog' data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Blog Posts </a>
+                        <div class="dropdown-menu multilevel-dropdown-menu-4" x-placement='right-start' id="submenu-blog">
+                            <a class="dropdown-item" href="#">Post without Sidebar</a>
+                            <a class="dropdown-item" href="#">Post with Sidebar</a>
+                            <a class="dropdown-item" href="#">Post with Left Sidebar</a>
+                        </div>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Blocks
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Documentation
+                    </a>
+                        <ul class="dropdown-menu multi-column columns-5">
+                            <div class="row documentation_row">
+                                <div class="col-sm-2">
+                                    <ul class="multi-column-dropdown">
+                                        <li><a href="#"><span class='header-mc'>USAGE</span></a></li>
+                                        <li><a href="#">Get Started</a></li>
+                                        <li><a href="#">Forms</a></li>
+                                        <li><a href="#">FAQ</a></li>
+                                        <br />
+                                        <li><a href="#"><span class='header-mc'>STYLEGUIDE</span></a></li>
+                                        <li><a href="#">Colors</a></li>
+                                        <li><a href="#">Fonts</a></li>
+                                        <li><a href="#">Duotone Icons</a></li>
+                                        <li><a href="#">Unicons</a></li>
+
+                                    </ul>
+                                </div>
+                                <div class="col-sm-2">
+                                    <ul class="multi-column-dropdown">
+                                        <li><a href="#"><span class='header-mc'><br /></span></a></li>
+                                        <li><a href="#">Changelog</a></li>
+                                        <li><a href="#">Credits</a></li>
+                                        <li><a href="#"><br /></a></li>
+                                        <br />
+                                        <li><a href="#"><span class='header-mc'><br /></span></a></li>
+                                        <li><a href="#">Illustrations</a></li>
+                                        <li><a href="#">Media</a></li>
+                                        <li><a href="#">Abstract Images</a></li>
+                                        <li><a href="#">Misc</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-3" >
+                                    <ul class="multi-column-dropdown" style="border-left: 1px solid #f2f2f2;margin-left:30px;">
+                                        <li><a href="#"><span class='header-mc'>ELEMENTS</span></a></li>
+                                        <li><a href="#">Accordian</a></li>
+                                        <li><a href="#">Alerts</a></li>
+                                        <li><a href="#">Animations</a></li>
+                                        <li><a href="#">Avatars</a></li>
+                                        <li><a href="#">Background</a></li>
+                                        <li><a href="#">Badges</a></li>
+                                        <li><a href="#">Breadcrumb</a></li>
+                                        <li><a href="#">Buttons</a></li>
+                                        <li><a href="#">Carousel</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-3">
+                                    <ul class="multi-column-dropdown" style="margin-left:-30px">
+                                        <li><a href="#"><span class='header-mc'><br /></span></a></li>
+                                        <li><a href="#">Dividers</a></li>
+                                        <li><a href="#">Form Elements</a></li>
+                                        <li><a href="#">Hover</a></li>
+                                        <li><a href="#">Image Mask</a></li>
+                                        <li><a href="#">Light Box</a></li>
+                                        <li><a href="#">Lists</a></li>
+                                        <li><a href="#">Media Player</a></li>
+                                        <li><a href="#">Modal</a></li>
+                                        <li><a href="#">Progressbar</a></li>
+                                    </ul>
+                                </div>                                
+                                <div class="col-sm-2">
+                                    <ul class="multi-column-dropdown" style="margin-left:-100px">
+                                        <li><a href="#"><span class='header-mc'><br /></span></a></li>
+                                        <li><a href="#">Shadows</a></li>
+                                        <li><a href="#">Shapes</a></li>
+                                        <li><a href="#">Tables</a></li>
+                                        <li><a href="#">Tabs</a></li>
+                                        <li><a href="#">Text Highlight</a></li>
+                                        <li><a href="#">Tooltips & Popovers</a></li>
+                                        <li><a href="#">Typed Text</a></li>
+                                        <li><a href="#">Typography</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </ul>
+                  </li>                  
+                  
+                </ul>
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item dropdown px-2 ms-auto">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          EN
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </li>
+                      <button class="btn btn-primary contact-btn">Contact</button>
+                </ul>
+              </div>   
         </nav>
     </body>
-    
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="header.js"></script>
+
 </html>
