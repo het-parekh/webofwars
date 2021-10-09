@@ -202,6 +202,7 @@ HEADER START
     #language{
         margin-left:auto;
         font-size: 25px;
+		position: relative;
     }
 
 }
@@ -346,11 +347,10 @@ BLOCK
 #column_left {
 	background-color: #1e202e!important;
     display:block;
-    position:absolute;
+    position:fixed;
     width:85%;
-    height:100%;
+	min-height: 100vh;   
     z-index: 1;
-    overflow-y:auto;
 }
 
 .nav-list li a {
@@ -372,7 +372,7 @@ BLOCK
 
 .nav-list > li{
     max-width:420px;
-    min-width:420px;
+    min-width:100%;
 }
 
 .nav-list > li > a:hover {
