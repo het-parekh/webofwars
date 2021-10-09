@@ -402,7 +402,7 @@ HEADER END
 ************************/
 
 
-
+/* Main Section sec 1 */
 .first-sec-img{
 	position: relative;
 	top: -100px;
@@ -437,12 +437,10 @@ HEADER END
 .btn-exp.appear{
 	transform: translateY(0);
 	opacity: 1;
-	/* animation: appear 1s ease forwards; */
 }
 .btn-free.appear{
 	transform: translateY(0);
 	opacity: 1;
-	/* animation: appear 1s ease forwards .3s; */
 }
 
 
@@ -580,7 +578,7 @@ HEADER END
 	padding: 80px;
 }
 
-/* 5th section carousel */
+/* Latest Project 5th section carousel */
 
 #imgs .img-cont-car {
 	min-width: 30%;
@@ -698,7 +696,7 @@ HEADER END
 	display: none;
 }
 
-/* 6th sections */
+/* Who are we 6th sections */
 .video-eff{
 	padding: 15px 60px;
 }
@@ -738,11 +736,8 @@ HEADER END
 }
 
 
-/* 7th section */
-/* .team-carousel{
-	width: 100%;
-	position: relative;
-} */
+/* Team section sec 7*/
+
 .move-top{
 	width: 50px;
 	height: 50px;
@@ -819,7 +814,7 @@ HEADER END
 .indi-card .social{
 	margin: 5px auto;
 }
-/* footer */
+/* footer sec 9 */
 .social{
 	display: flex;
 }
@@ -835,6 +830,7 @@ transition: all .2s ease-in-out;
 	transform: translateY(-4px);
 }
 
+/* Animations */
 @keyframes glow {
 	0%{
 		transform: scale(1)
