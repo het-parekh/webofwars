@@ -680,6 +680,7 @@ HEADER END
 	border-radius: 50%;
 	border: 1px solid #666;
 	margin: 4px;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
 }
 .dots-img .dot.active{
 	background-color: #666;
