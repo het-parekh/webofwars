@@ -347,10 +347,11 @@ BLOCK
 #column_left {
 	background-color: #1e202e!important;
     display:block;
-    position:fixed;
+    position:absolute;
     width:85%;
-	min-height: 100vh;   
+	min-height: 1000vh;   
     z-index: 1;
+	overflow-y:auto;
 }
 
 .nav-list li a {
