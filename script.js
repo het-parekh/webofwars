@@ -106,15 +106,6 @@ let dots = document.querySelectorAll('.dots-img .dot')
 
 let idx = 0
 
-
-// let interval = setInterval(run, 2000)
-
-// function run() {
-//   idx++
-
-//   changeImage()
-// }
-
 function changeImage() {
 
 
@@ -132,11 +123,6 @@ function changeImage() {
   }
 }
 
-
-// function resetInterval() {
-//   // clearInterval(interval)
-//   interval = setInterval(run, 2000)
-// }
 
 leftBtn.addEventListener('click',
   () => {
@@ -164,7 +150,6 @@ rightBtn.addEventListener('click', () => {
     changeImage()
   }
 
-  // resetInterval()
 })
 
 
@@ -195,7 +180,6 @@ function scrollLeftRight(i) {
 
 teamDots.forEach((dot, i) => {
   dot.addEventListener('click', () => {
-    console.log(dot, i, idx1, 'fuck')
     if (i >= idx1) {
       teamDots[idx1].classList.remove('active')
       idx1 = i
