@@ -693,6 +693,9 @@ HEADER END
 .dots-team .dot.active{
 	background-color: #666;
 }
+.dots-img .dot.mobile{
+	display: none;
+}
 
 /* 6th sections */
 .video-eff{
@@ -912,7 +915,7 @@ transition: all .2s ease-in-out;
 		display: inline-block;
 	}
 	.dots-img .dot.mobile{
-		display: none;
+		display: inline-block;
 	}
 	#cards .indi-card{
 		width: 450px;

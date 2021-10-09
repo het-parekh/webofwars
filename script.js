@@ -117,26 +117,15 @@ let idx = 0
 
 function changeImage() {
 
-  if (idx > img.length - 3) {
-    dots[idx].classList.remove('active')
-    idx = 0
-    dots[idx].classList.add('active')
-  }
-  else if (idx < 0) {
-    idx = img.length - 1
-  }
 
   if (document.body.getBoundingClientRect().width <= 768 && document.body.getBoundingClientRect().width > 520) {
     imgContainer.style.transform = `translateX(${-idx * 500}px)`
-    console.log("fuck1", document.body.getBoundingClientRect().width)
   }
   else if (document.body.getBoundingClientRect().width <= 520) {
     let temp = imgContainer.getBoundingClientRect().width
-    console.log("fuck2")
     imgContainer.style.transform = `translateX(${-idx * temp}px)`
   }
   else {
-    console.log("fuck3")
     let temp = imgContainer.getBoundingClientRect().width
     let res = (temp * .3) + 2 * (temp * .017)
     imgContainer.style.transform = `translateX(${-idx * res}px)`
@@ -151,12 +140,7 @@ function changeImage() {
 
 leftBtn.addEventListener('click',
   () => {
-    if (idx == 0) {
-      dots[idx].classList.remove('active')
-      idx = img.length - 3
-      dots[idx].classList.add('active')
-      changeImage()
-    } else {
+    if (idx > 0) {
       dots[idx].classList.remove('active')
 
       idx--
@@ -164,14 +148,21 @@ leftBtn.addEventListener('click',
 
       changeImage()
     }
-    // resetInterval()
   })
 rightBtn.addEventListener('click', () => {
-  dots[idx].classList.remove('active')
-  console.log(dots[idx], 'fuck')
-  idx++
-  dots[idx].classList.add('active')
-  changeImage()
+  if ((idx < img.length - 3)) {
+
+    dots[idx].classList.remove('active')
+    idx++
+    dots[idx].classList.add('active')
+    changeImage()
+  }
+  else if (document.body.getBoundingClientRect().width <= 768 && idx < img.length - 1) {
+    dots[idx].classList.remove('active')
+    idx++
+    dots[idx].classList.add('active')
+    changeImage()
+  }
 
   // resetInterval()
 })
@@ -187,18 +178,15 @@ let idx1 = 0
 const teamDots = document.querySelectorAll('.dots-team .dot')
 
 
-function scrollLeft(i) {
+function scrollLeftRight(i) {
   if (document.body.getBoundingClientRect().width <= 768 && document.body.getBoundingClientRect().width > 520) {
     cards.style.transform = `translateX(${-i * 500}px)`
-    console.log("fuck1", document.body.getBoundingClientRect().width)
   }
   else if (document.body.getBoundingClientRect().width <= 520) {
     let temp = cards.getBoundingClientRect().width
-    console.log("fuck2")
     cards.style.transform = `translateX(${-i * temp}px)`
   }
   else {
-    console.log("fuck3")
     let temp = cards.getBoundingClientRect().width
     let res = (temp * .3) + 2 * (temp * .017)
     cards.style.transform = `translateX(${-i * res}px)`
@@ -212,13 +200,13 @@ teamDots.forEach((dot, i) => {
       teamDots[idx1].classList.remove('active')
       idx1 = i
       teamDots[idx1].classList.add('active')
-      scrollLeft(i)
+      scrollLeftRight(i)
     }
     else {
       teamDots[idx1].classList.remove('active')
       idx1 = i
       teamDots[idx1].classList.add('active')
-      scrollLeft(i)
+      scrollLeftRight(i)
     }
   })
 })
