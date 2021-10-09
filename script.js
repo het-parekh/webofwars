@@ -1,71 +1,70 @@
 // Navbar
 $(document).ready(function () {
 
-  $('.dropdown-item').on("click", function(e){
+  $('.dropdown-item').on("click", function (e) {
     e.stopPropagation();
     e.preventDefault();
   });
 
   $("#column_left").hide()
 
-  $("#close-sidebar").click(function(){
-      $('.navbar-toggler').toggleClass('collapsed')
-      $("#column_left").toggle()
+  $("#close-sidebar").click(function () {
+    $('.navbar-toggler').toggleClass('collapsed')
+    $("#column_left").toggle()
   })
 
-  $(".navbar-toggler").click(function(e){
-      e.stopPropagation();
-      e.preventDefault();
-      $(this).toggleClass('collapsed')
-      $("#column_left").toggle()
+  $(".navbar-toggler").click(function (e) {
+    e.stopPropagation();
+    e.preventDefault();
+    $(this).toggleClass('collapsed')
+    $("#column_left").toggle()
   })
 
-  $(".nav-link").click(function(){
-      $(this).toggleClass('addcolor')
-  })    
-  $(".nav-link").blur(function(){
-      $(this).removeClass('addcolor')
+  $(".nav-link").click(function () {
+    $(this).toggleClass('addcolor')
+  })
+  $(".nav-link").blur(function () {
+    $(this).removeClass('addcolor')
   })
 
-  $('.multilevel').each(function() {
-      let val = $($(this)).attr('id')
+  $('.multilevel').each(function () {
+    let val = $($(this)).attr('id')
 
-      $(`#${val}`).mouseenter(function(){
-          $(this).attr('aria-expanded',true)
-          $(`#submenu-${val}`).addClass("show")
-          
-      })
-  
-      $(`#${val}`).mouseleave(function(){
-          $(this).attr('aria-expanded',true)
-          $(`#submenu-${val}`).removeClass("show")
-      })    
+    $(`#${val}`).mouseenter(function () {
+      $(this).attr('aria-expanded', true)
+      $(`#submenu-${val}`).addClass("show")
+
+    })
+
+    $(`#${val}`).mouseleave(function () {
+      $(this).attr('aria-expanded', true)
+      $(`#submenu-${val}`).removeClass("show")
+    })
   })
 
-  $('.multilevel').hover(function() {
-      console.log($(this))
-      let val = $($(this)).attr('id')
-      console.log(val,'val')
+  $('.multilevel').hover(function () {
+    console.log($(this))
+    let val = $($(this)).attr('id')
+    console.log(val, 'val')
 
-      $(`#${val}`).mouseenter(function(){
-          $(this).attr('aria-expanded',true)
-          $(`#submenu-${val}`).addClass("show")
-          
-      })
-  
-      $(`#${val}`).mouseleave(function(){
-          $(this).attr('aria-expanded',true)
-          $(`#submenu-${val}`).removeClass("show")
-      })    
+    $(`#${val}`).mouseenter(function () {
+      $(this).attr('aria-expanded', true)
+      $(`#submenu-${val}`).addClass("show")
+
+    })
+
+    $(`#${val}`).mouseleave(function () {
+      $(this).attr('aria-expanded', true)
+      $(`#submenu-${val}`).removeClass("show")
+    })
   })
 
-  $(".multi-column-img-dropdown").hover(function(){
-      $(this).addClass('translateImage')
-      },
-      function()
-      {
-          $(this).removeClass('translateImage')
-      }
+  $(".multi-column-img-dropdown").hover(function () {
+    $(this).addClass('translateImage')
+  },
+    function () {
+      $(this).removeClass('translateImage')
+    }
   )
 
 });
@@ -175,4 +174,51 @@ rightBtn.addEventListener('click', () => {
   changeImage()
 
   // resetInterval()
+})
+
+
+// Team section carousel
+
+const cards = document.querySelector('#cards')
+const allCards = document.querySelectorAll('.indi-card')
+
+let idx1 = 0
+
+const teamDots = document.querySelectorAll('.dots-team .dot')
+
+
+function scrollLeft(i) {
+  if (document.body.getBoundingClientRect().width <= 768 && document.body.getBoundingClientRect().width > 520) {
+    cards.style.transform = `translateX(${-i * 500}px)`
+    console.log("fuck1", document.body.getBoundingClientRect().width)
+  }
+  else if (document.body.getBoundingClientRect().width <= 520) {
+    let temp = cards.getBoundingClientRect().width
+    console.log("fuck2")
+    cards.style.transform = `translateX(${-i * temp}px)`
+  }
+  else {
+    console.log("fuck3")
+    let temp = cards.getBoundingClientRect().width
+    let res = (temp * .3) + 2 * (temp * .017)
+    cards.style.transform = `translateX(${-i * res}px)`
+  }
+}
+
+teamDots.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    console.log(dot, i, idx1, 'fuck')
+    if (i >= idx1) {
+      teamDots[idx1].classList.remove('active')
+      idx1 = i
+      teamDots[idx1].classList.add('active')
+      scrollLeft(i)
+    }
+    else {
+      teamDots[idx1].classList.remove('active')
+      idx1 = i
+      teamDots[idx1].classList.add('active')
+      scrollLeft(i)
+    }
+  })
 })

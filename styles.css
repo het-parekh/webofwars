@@ -668,12 +668,13 @@ HEADER END
 	bottom: 50px;
 	right: 50px;
 }
-.dots-img{
+.dots-img,.dots-team{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-.dots-img .dot{
+.dots-img .dot,
+.dots-team .dot{
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
@@ -681,6 +682,15 @@ HEADER END
 	margin: 4px;
 }
 .dots-img .dot.active{
+	background-color: #666;
+}
+.dots-team .dot{
+	cursor: pointer;
+}
+.dots-team .dot.mobile{
+	display: none;
+}
+.dots-team .dot.active{
 	background-color: #666;
 }
 
@@ -753,11 +763,17 @@ HEADER END
 .team-sec{
 	margin: 120px auto;
 }
-#cards{
-	/* width: 100%; */
-	overflow: hidden;
-	display: flex;
+.team-carousel{
+	width: 100%;
 	margin: auto;
+	overflow: hidden;
+	position: relative;
+}
+#cards{
+	display: flex;
+	flex-direction: row;
+	transform: translateX(0);
+	transition: transform 0.5s ease-in-out;	
 }
 #cards .indi-card{
 	min-width: 30%;
@@ -767,8 +783,38 @@ HEADER END
 	border-radius: 12px;
 	position: relative;
 	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
-
+.indi-card .img-contain{
+	width: 160px;
+	height: 160px;
+	max-width: 80%;
+	border-radius: 50%;
+}
+.indi-card .img-contain img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+.indi-card .name{
+	font-weight:bold;
+	margin: 5px auto;
+}
+.indi-card .degination{
+	color: #aaa;
+	margin: 5px auto;
+}
+.indi-card .their-info{
+	text-align: center;
+	color: gray;
+	margin: 5px auto;
+}
+.indi-card .social{
+	margin: 5px auto;
+}
 /* footer */
 .social{
 	display: flex;
@@ -813,6 +859,10 @@ transition: all .2s ease-in-out;
 		margin: 20px auto;
 		left: 0;
 	}
+	.btns{
+		justify-content: center;
+		flex-grow: 1;
+	}
 	.section-4-illus{
 		width: 0;
 		display: none;
@@ -855,11 +905,21 @@ transition: all .2s ease-in-out;
 	.footer{
 		margin: auto 15px;
 	}
-	.btn-left{
-		left: 10px;
-	}
 	.btn-right{
-		right: 10px;
+		right:45px;
+	}
+	.dots-team .dot.mobile{
+		display: inline-block;
+	}
+	.dots-img .dot.mobile{
+		display: none;
+	}
+	#cards .indi-card{
+		width: 450px;
+		min-width: 450px;
+		object-fit: cover;
+		margin: 25px;
+		border-radius: 12px;
 	}
 }
 @media (max-width: 520px){
@@ -871,5 +931,20 @@ transition: all .2s ease-in-out;
 		min-width: 100%;
 		height: 250px;
 		margin: 0px;
+	}
+	.btn-left{
+		left: 10px;
+	}
+	.btn-right{
+		right: 10px;
+	}
+	.team-carousel{
+		margin: 50px auto;
+	}
+	#cards .indi-card{
+		width: 100%;
+		min-width: 100%;
+		margin: 0px;
+
 	}
 }
